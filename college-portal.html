@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .course-list {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>College Portal</h2>
+        <input type="text" id="username" placeholder="Enter Username">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+        
+        <h3>Courses Available</h3>
+        <ul class="course-list">
+            <li>BCA - Bachelor of Computer Applications</li>
+            <li>BSc - Computer Science</li>
+            <li>BBA - Business Administration</li>
+            <li>BA - English Literature</li>
+        </ul>
+        
+        <h3>Announcements</h3>
+        <p id="announcement">New semester starts on July 15!</p>
+    </div>
+    
+    <script>
+        function login() {
+            let user = document.getElementById('username').value;
+            let pass = document.getElementById('password').value;
+            if(user === "Mythili" && pass === "password1234") {
+                alert("Login Successful!");
+            } else {
+                alert("Invalid credentials. Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
